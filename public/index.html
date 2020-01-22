@@ -6,17 +6,22 @@
   </head>
   <body>
     <a-scene>
-        <a-assets>
-            <a-asset-item id="helmet_model" response-type="arraybuffer" src="assets\models\DamagedHelmet.glb" ></a-asset-item>"
-        </a-assets>
+        
 
-       <a-entity camera look-controls wasd-controls position="0 1.2 2">
+      <a-entity id="rig" position="0 2 2">
+        <a-entity id="camera" camera look-controls></a-entity>
         <a-entity cursor="rayOrigin:mouse;"
                   raycaster="far:20; interval:100; objects:.clickable;">
         </a-entity>
-    </a-entity>
+      </a-entity>
+        
+      </a-entity>
       
-      <a-sky color="#ECECEC"></a-sky>
+      <a-assets>
+        <img id="sky" src="assets/textures/wallpaper.jpg">
+        <img id="sky2" src="assets/textures/rocky.jpg">
+      </a-assets>
+      <a-sky id="background" src="#sky"></a-sky>
       <a-entity id="plane"
                 position="0 0 0"
                 rotation="-90 0 0"
@@ -32,10 +37,7 @@
             create-cow-component="">
       </a-entity>
 
-      <a-entity id="helmet"
-      position="0 1 -4" 
-      scale="1 1 1"
-      gltf-model="#helmet_model"></a-entity>
+      
     </a-scene>
   </body>
 </html>

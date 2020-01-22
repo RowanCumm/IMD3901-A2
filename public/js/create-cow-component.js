@@ -7,6 +7,7 @@ AFRAME.registerComponent( 'create-cow-component',{
 
         Context_AF.el.addEventListener('click', function(event) {
             console.log('click');
+
             Context_AF.createCow();
         });
 
@@ -21,6 +22,10 @@ AFRAME.registerComponent( 'create-cow-component',{
     },
     createCow: function() {
         const Context_AF = this;
+
+        const skyElem = document.querySelector("#background");
+
+        skyElem.setAttribute('src', '#sky2')
 
         let cowElem = document.createElement('a-entity');
         cowElem.setAttribute('class','clickable');
