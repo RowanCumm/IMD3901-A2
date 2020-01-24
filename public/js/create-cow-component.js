@@ -25,20 +25,16 @@ AFRAME.registerComponent( 'create-cow-component',{
 
         const skyElem = document.querySelector("#background");
 
-        skyElem.setAttribute('src', '#sky2')
+        if (Context_AF.el.getAttribute('id') === 'button1')
+            {
+                skyElem.setAttribute('src', '#sky1');
+            }
+        else if (Context_AF.el.getAttribute('id') === 'button2')
+            {
 
-        let cowElem = document.createElement('a-entity');
-        cowElem.setAttribute('class','clickable');
-        cowElem.setAttribute('obj-model', 'obj:/assets/models/Cow.obj');
-        cowElem.setAttribute('material', 'src:assets/textures/Cow.png');
-        cowElem.setAttribute('delete-cow-component', '');
-
-        cowElem.setAttribute('position', { x:(Math.random() * 6.0) -3.0, y:0, z:-4.0 -(Math.random() * 3.0)});
-        const randScale = 0.2 + (Math.random() * 8.0);
-        cowElem.setAttribute('scale', {x:randScale, y:randScale, z:randScale});
-        cowElem.setAttribute('rotation', {x:0, y:Math.random() * 360.0, z:0});
-
-        let scene = document.querySelector('a-scene');
-        scene.appendChild(cowElem);
+                skyElem.setAttribute('src', '#sky2');
+            }
+         
+        
     }
 });

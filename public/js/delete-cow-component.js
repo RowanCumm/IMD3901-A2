@@ -13,7 +13,6 @@ AFRAME.registerComponent( 'delete-cow-component',{
 
         Context_AF.el.addEventListener('mouseenter', function(event) {
             Context_AF.el.object3D.scale.set((Context_AF.origScale.x * 1.1), (Context_AF.origScale.y * 1.1), (Context_AF.origScale.z * 1.1));
-            console.log('Context_AF.origScale.x')
         });
 
         Context_AF.el.addEventListener('mouseleave', function(event) {
