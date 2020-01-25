@@ -18,8 +18,9 @@
       </a-entity>
       
       <a-assets>
-        <img id="sky1" src="assets/textures/wallpaper.jpg">
+        <img id="sky1" src="assets/textures/forest.jpg">
         <img id="sky2" src="assets/textures/rocky.jpg">
+        <img id="sky3" src="assets/textures/water.jpg">
       </a-assets>
       <a-sky id="background" src="#sky1"></a-sky>
       <a-entity id="plane"
@@ -31,7 +32,8 @@
             </a-entity>
       <a-entity id="button1"
             class="clickable"
-            position="0 0 -2"
+            position="-2 0 -2"
+            rotation="20 0 0"
             geometry="primitive:cylinder; radius:0.5; height:0.1;"
             material="color:green;"
             create-cow-component="">
@@ -39,7 +41,17 @@
 
       <a-entity id="button2"
             class="clickable"
+            position="0 0 -2"
+            rotation="20 0 0"
+            geometry="primitive:cylinder; radius:0.5; height:0.1;"
+            material="color:yellow;"
+            create-cow-component="">
+      </a-entity>
+
+      <a-entity id="button3"
+            class="clickable"
             position="2 0 -2"
+            rotation="20 0 0"
             geometry="primitive:cylinder; radius:0.5; height:0.1;"
             material="color:red;"
             create-cow-component="">

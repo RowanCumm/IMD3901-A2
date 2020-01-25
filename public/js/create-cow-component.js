@@ -34,6 +34,11 @@ AFRAME.registerComponent( 'create-cow-component',{
 
                 skyElem.setAttribute('src', '#sky2');
             }
+        else if (Context_AF.el.getAttribute('id') === 'button3')
+            {
+
+                skyElem.setAttribute('src', '#sky3');
+            }
          
         
     }
