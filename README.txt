@@ -1,0 +1,8 @@
+I wanted to make a small very basic environment where it could be changed with the press of a button. In this A-frame project, the user is allowed to look around with the camera, but not move position, and can click on the three buttons in front of them. Each corresponds to a different environment with unique objects that they can create more of by clicking the same button over and over. When a different button is pressed, the objects already created get destroyed so that the user can create different ones. Additionally there is a sound that plays whenever an object is created and the user can click on the object to delete it.
+
+I had a really hard time trying to use querySelector to find entities with certain id's in order to delete them. I kept trying variations of means to do it over and over, asking others for advice and looking for solutions on the internet. Then I found out that querySelector doesn't like entries with numbers so I had to go back and change the naming of the id (ended up changing it to find the entities through class instead). And that worked! It was a small issue that really slowed down the entire process of finishing the project. A lot of trial and error in the progress of working on the assignment.
+
+Adding sounds weren't as hard as I thought they'd be. Though I couldn't seem to get them to play only while the attached object was clicked on, I still found a reasonable solution. Quite fun to look around for audio for the objects. 
+
+URL TO GITHUB:
+https://github.com/RowanCumm/IMD3901-A2
