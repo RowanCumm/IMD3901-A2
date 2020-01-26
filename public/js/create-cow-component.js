@@ -28,8 +28,6 @@ AFRAME.registerComponent( 'create-cow-component',{
     },
     deleteExisting: function(){
 
-        var sceneEl = document.querySelector('a-scene');
-
         document.querySelectorAll(".bois").forEach(e => e.parentNode.removeChild(e));
        
     },
@@ -49,7 +47,7 @@ AFRAME.registerComponent( 'create-cow-component',{
                 if(skyElem.getAttribute('src') != '#sky1'){
                     skyElem.setAttribute('src', '#sky1');
                 }
-                
+                modelElem.setAttribute('sound', 'src: #appleSound; autoplay: true; volume:400');
                 modelElem.setAttribute('obj-model', 'obj: #appleObj');
                 modelElem.setAttribute('material', 'color: #FF0000');
                 modelElem.setAttribute('scale', {x:0.1, y:0.1, z:0.1});
@@ -59,15 +57,18 @@ AFRAME.registerComponent( 'create-cow-component',{
                 if(skyElem.getAttribute('src') != '#sky2'){
                     skyElem.setAttribute('src', '#sky2');
                 }
-                modelElem.setAttribute('obj-model', 'obj: #pizzaObj');
+                modelElem.setAttribute('sound', 'src: #bleatSound; autoplay: true; volume:400');
+                modelElem.setAttribute('obj-model', 'obj: #deerObj');
+                modelElem.setAttribute('animation','property: rotation; to: 0 360 0; loop: true; dur: 10000');
                 modelElem.setAttribute('material', 'color: #F56826');
-                modelElem.setAttribute('scale', {x:4, y:4, z:4});
+                modelElem.setAttribute('scale', {x:0.05, y:0.05, z:0.05});
             }
         else if (Context_AF.el.getAttribute('id') === 'button3')
             {
                 if(skyElem.getAttribute('src') != '#sky3'){
                     skyElem.setAttribute('src', '#sky3');
                 }
+                modelElem.setAttribute('sound', 'src:#rexSound;  autoplay: true; volume:100');
                 modelElem.setAttribute('obj-model', 'obj: #rexObj');
                 modelElem.setAttribute('scale', {x:0.025, y:0.025, z:0.025});
                 modelElem.setAttribute('material', 'color: #19992A');
@@ -75,7 +76,7 @@ AFRAME.registerComponent( 'create-cow-component',{
         
         
         modelElem.setAttribute('delete-cow-component', '');
-        modelElem.setAttribute('position', { x:(Math.random() * 12.0) -4.0, y:0, z:-15});
+        modelElem.setAttribute('position', { x:(Math.random() * 22.0) -4.0, y:-1, z:-15});
         
         modelElem.setAttribute('rotation', {x:0, y:Math.random() * 360.0, z:0});
 

@@ -8,6 +8,7 @@ AFRAME.registerComponent( 'delete-cow-component',{
 
         Context_AF.el.addEventListener('click', function(event) {
             console.log('click');
+            
             Context_AF.deleteCow();
         });
 
